@@ -22,8 +22,8 @@
 
                   <p class="byline entry-meta vcard">
 
-                    <i class="fa fa-calendar"></i> <?php get_the_time(get_option('date_format')); ?>
-                     | <i class="fa fa-folder"></i> <?php get_the_category_list(', '); ?>
+                    <i class="fa fa-calendar"></i> <?php echo get_the_time(get_option('date_format')); ?>
+                     | <i class="fa fa-folder"></i> <?php echo get_the_category_list(', '); ?>
                     <?php the_tags( ' | <i class="fa fa-tags"></i> ', ', ', '' ); ?>
 
 
