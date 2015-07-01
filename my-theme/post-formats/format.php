@@ -22,12 +22,10 @@
 
                   <p class="byline entry-meta vcard">
 
-                    <?php printf( __( 'Posted', 'bonestheme' ).' %1$s %2$s',
-                       /* the time the post was published */
-                       '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
-                       /* the author of the post */
-                       '<span class="by">'.__( 'by', 'bonestheme' ).'</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
-                    ); ?>
+                    <i class="fa fa-calendar"></i> <?php get_the_time(get_option('date_format')); ?>
+                     | <i class="fa fa-folder"></i> <?php get_the_category_list(', '); ?>
+                    <?php the_tags( ' | <i class="fa fa-tags"></i> ', ', ', '' ); ?>
+
 
                   </p>
 
@@ -60,10 +58,6 @@
                 </section> <?php // end article section ?>
 
                 <footer class="article-footer">
-
-                  <?php printf( __( 'filed under', 'bonestheme' ).': %1$s', get_the_category_list(', ') ); ?>
-
-                  <?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
 
                 </footer> <?php // end article footer ?>
 

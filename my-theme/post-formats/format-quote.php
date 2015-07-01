@@ -4,8 +4,6 @@
 
                 <header class="article-header">
 
-                  <h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
-
                   <p class="byline vcard">
                     <?php printf( __( 'Posted', 'bonestheme' ).' %1$s %2$s',
                        /* the time the post was published */
@@ -18,6 +16,7 @@
                 </header> <?php // end article header ?>
 
                 <section class="entry-content cf" itemprop="articleBody">
+                  <blockquote>
                   <?php
                     // the content (pretty self explanatory huh)
                     the_content();
@@ -41,6 +40,7 @@
                       'link_after'  => '</span>',
                     ) );
                   ?>
+                  </blockquote>
                 </section> <?php // end article section ?>
 
                 <footer class="article-footer">

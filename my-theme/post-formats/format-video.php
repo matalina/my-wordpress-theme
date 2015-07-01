@@ -4,8 +4,6 @@
 
                 <header class="article-header entry-header">
 
-                  <h1 class="entry-title single-title" itemprop="name"><?php the_title(); ?></h1>
-
                   <p class="byline entry-meta vcard">
                     <?php printf( __( 'Posted', 'bonestheme' ).' %1$s %2$s',
                        /* the time the post was published */
