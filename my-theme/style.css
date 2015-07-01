@@ -1,0 +1,25 @@
+/******************************************************************
+Theme Name: My Theme
+Theme URI: https://github.com/matalina/my-wordpress-theme
+Description: Wordpress theme with different custom post formats, featured images and all other items I need in a theme.
+Author: Alicia Wilkerson
+Author URI: http://journal.aliciawilkerson.com
+Version: 0.1
+Tags: fluid-layout, responsive-layout, accessibility-ready, translation-ready, microformats, rtl-language-support, post-format
+
+License: MIT
+License URI: http://opensource.org/licenses/MIT
+******************************************************************/
+
+/*
+WordPress Probz
+So Theme Check (http://wordpress.org/plugins/theme-check/)
+is constantly telling me that it needs these classes in the CSS even
+though they are in the REAL stylesheet in library/css/style.css.
+So we're gonna drop these here to keep it happy.
+Great work, Theme Check (eye roll)
+*/
+
+.sticky {}          /* DO NOT EDIT THIS */
+.gallery-caption {} /* THESE ARE USELESS */
+.bypostauthor {}    /* THEY ARE ONLY TO KEEP THEME CHECK HAPPY */
