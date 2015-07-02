@@ -18,7 +18,11 @@
 
                 <header class="article-header entry-header">
 
-                  <h1 class="entry-title single-title" itemprop="headline" rel="bookmark"><?php the_title(); ?></h1>
+                  <h1 class="entry-title single-title" itemprop="headline" rel="bookmark">
+                    <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+                      <?php the_title(); ?>
+                    </a>
+                  </h1>
 
                   <p class="byline entry-meta vcard">
 
@@ -33,8 +37,11 @@
 
                 <section class="entry-content cf" itemprop="articleBody">
                   <?php
+                  if ( has_post_thumbnail() ) {
+                  	the_post_thumbnail();
+                  } 
                     // the content (pretty self explanatory huh)
-                    the_content();
+                    the_content('Read More &helip;');
 
                     /*
                      * Link Pages is used in case you have posts that are set to break into
